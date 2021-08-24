@@ -1,7 +1,7 @@
 nvim: 
-	stow -t ~/.config/nvim vim
+	stow -R -t ~/.config/nvim vim
 
 vim: 
-	stow -t ~/.vim vim
+	stow -R -t ~/.vim vim
 
 .PHONY: nvim vim

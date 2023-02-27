@@ -55,13 +55,41 @@ let s:IN3 = s:MakeCol(s:light_gray, s:black)
 let g:airline#themes#rend#palette.inactive         = airline#themes#generate_color_map(s:IN1, s:IN2, s:IN3)
 let g:airline#themes#rend#palette.replace_modified = airline#themes#generate_color_map(s:IN1, s:changed, s:changed)
 
-" CtrlP
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
-endif
+" Warnings
+let g:airline#themes#rend#palette.normal.airline_warning = [
+ \ s:mint[1], s:black[1], s:mint[0], s:black[0]
+ \ ]
+let g:airline#themes#rend#palette.normal_modified.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.insert.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.insert_modified.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.visual.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.visual_modified.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.replace.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
+let g:airline#themes#rend#palette.replace_modified.airline_warning =
+\ g:airline#themes#rend#palette.normal.airline_warning
 
-let s:CP1 = s:MakeCol(s:white, s:black)
-let s:CP2 = s:MakeCol(s:white, s:black)
-let s:CP3 = s:MakeCol(s:white, s:black)
+" Errors
+let g:airline#themes#rend#palette.normal.airline_error = [
+ \ s:pink[1], s:black[1], s:pink[0], s:black[0]
+ \ ]
+let g:airline#themes#rend#palette.normal_modified.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.insert.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.insert_modified.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.visual.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.visual_modified.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.replace.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
+let g:airline#themes#rend#palette.replace_modified.airline_error =
+\ g:airline#themes#rend#palette.normal.airline_error
 
-let g:airline#themes#rend#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
